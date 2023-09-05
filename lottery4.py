@@ -19,7 +19,7 @@ import sys
 已經有此號碼，請重新輸入！
 遊戲已結束
 請輸入範圍內的號碼
- ----------------------
+" ----------------------"
 """
 
 def get_lottery_num(temp_total_num, temp_lottery_num):
