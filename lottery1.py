@@ -1,6 +1,6 @@
 import operator
 import random
-
+#測試用
 def get_lottery_num(temp_total_num, temp_lottery_num):
     pool = list()
     lottery_pool = list()
@@ -15,6 +15,8 @@ def get_lottery_num(temp_total_num, temp_lottery_num):
         lottery_pool.append(pool[j]+1)
 
     return lottery_pool
+
+
 
 
 
