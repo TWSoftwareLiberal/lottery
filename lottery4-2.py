@@ -15,6 +15,7 @@ import random
 請輸入自己的號碼(玩一次350元)
 自選號碼
 """
+#change by twLiberal
 def get_lottery_num(temp_total_num, temp_lottery_num):
     pool = list()
     lottery_pool = list()
