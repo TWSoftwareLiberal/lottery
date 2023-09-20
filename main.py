@@ -6,7 +6,6 @@ Created on Tue Jun 20 05:23:51 2023
 @author: jajayu
 """
 
-import operator
 import random
 import sys
 
