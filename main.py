@@ -46,7 +46,6 @@ def compare_lottery_num(temp_choice, temp_lottery):
 
 if __name__ == '__main__':
 
-
     while True:
         total_choice = list()
         final_lottery_num = list()
