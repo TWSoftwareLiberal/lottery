@@ -9,13 +9,6 @@ Created on Tue Jun 20 05:23:51 2023
 import operator
 import random
 
-"""
-中獎號碼 
-特別號碼
-請輸入自己的號碼(玩一次350元)
-自選號碼
-"""
-#change by twLiberal
 def get_lottery_num(temp_total_num, temp_lottery_num):
     pool = list()
     lottery_pool = list()
@@ -26,7 +19,7 @@ def get_lottery_num(temp_total_num, temp_lottery_num):
     random.shuffle(pool)
     
     for j in range(int(temp_lottery_num)):
-        print("todo1#{}:\t{}".format( j+1, pool[j]+1))
+        print("中獎號碼#{}:\t{}".format(j+1, pool[j]+1))
         lottery_pool.append(pool[j]+1)
 
     return lottery_pool
@@ -52,10 +45,10 @@ def compare_lottery_num(temp_choice, temp_lottery):
 
 
 def compare_single_num(temp_choice, temp_lottery):
-    
     for i in temp_lottery:
         if int(temp_choice) == i:
             return True
+    
             
         else: continue 
         
@@ -71,10 +64,10 @@ def get_TWlottery_num():
     random.shuffle(pool)
     
     for j in range(6):
-        print("todo2#{}:\t{}".format( j+1, pool[j]+1))
+        print("中獎號碼#{}:\t{}".format(j+1, pool[j]+1))
         lottery_pool.append(pool[j]+1)
     
-    print("todo3:\t{}".format( pool[6]+1))
+    print("特別號碼:\t{}".format(pool[6]+1))
     lottery_pool.append(pool[6]+1)
     
     return lottery_pool
