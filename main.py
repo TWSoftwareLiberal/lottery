@@ -45,27 +45,27 @@ def compare_lottery_num(temp_choice, temp_lottery):
 
 
 if __name__ == '__main__':
-    
+
     while True:
-        total_choice = list() 
+        total_choice = list()
         final_lottery_num = list()
-        
-        total_num = int(input("todo2: "))
-        lottery_num = int(input("todo3: "))
-        
+
+        total_num = int(input("請輸入樂透母池最大數: "))
+        lottery_num = int(input("請輸入樂透抽取數: "))
+
         #print(total_choice)
-    
+
         #print(pool)
- 
-        print("todo4")
-            
+
+        print("請輸入自己的號碼")
+
         for i in range(lottery_num):
-            choice = input("todo5#{}: ".format(i+1))
-                
+            choice = input("自選號碼#{}: ".format( i+1))
+
             total_choice.append(int(choice))
 
-            
+
         final_lottery_num = get_lottery_num( total_num, lottery_num)
         print(final_lottery_num)
-            
+
         print("～對中 {} 個號碼～".format(compare_lottery_num(total_choice, final_lottery_num)))
