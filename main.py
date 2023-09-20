@@ -76,10 +76,10 @@ def get_TWlottery_num():
     random.shuffle(pool)
     
     for j in range(6):
-        print("todo2#{}:\t{}".format(j+1, pool[j]+1))
+        print("中獎號碼#{}:\t{}".format(j+1, pool[j]+1))
         lottery_pool.append(pool[j]+1)
     
-    print("todo3:\t{}".format(pool[6]+1))
+    print("特別號碼:\t{}".format(pool[6]+1))
     lottery_pool.append(pool[6]+1)
     
     return lottery_pool
@@ -104,7 +104,7 @@ def compare_TWlottery_num(temp_choice, temp_twlottery):
    
     result_num = compare_lottery_num(temp_choice, normal_num)
     
-    print("todo4")
+    print(" ----------------------")
     
     if result_num == 3:
         print("|     『恭喜中普獎』     |")
