@@ -22,7 +22,7 @@ def get_lottery_num(temp_total_num, temp_lottery_num):
     random.shuffle(pool)
     
     for j in range(int(temp_lottery_num)):
-        print("todo1#{}: {}".format(j+1, pool[j]+1))
+        print("中獎號碼#{}: {}".format( j+1, pool[j]+1))
         lottery_pool.append(pool[j]+1)
 
     return lottery_pool
