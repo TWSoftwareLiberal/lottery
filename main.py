@@ -9,6 +9,12 @@ Created on Tue Jun 20 05:23:51 2023
 import operator
 import random
 
+"""
+中獎號碼 
+特別號碼
+請輸入自己的號碼(玩一次350元)
+自選號碼
+"""
 def get_lottery_num(temp_total_num, temp_lottery_num):
     pool = list()
     lottery_pool = list()
@@ -19,7 +25,7 @@ def get_lottery_num(temp_total_num, temp_lottery_num):
     random.shuffle(pool)
     
     for j in range(int(temp_lottery_num)):
-        print("中獎號碼#{}:\t{}".format(j+1, pool[j]+1))
+        print("todo1#{}:\t{}".format( j+1, pool[j]+1))
         lottery_pool.append(pool[j]+1)
 
     return lottery_pool
@@ -45,10 +51,10 @@ def compare_lottery_num(temp_choice, temp_lottery):
 
 
 def compare_single_num(temp_choice, temp_lottery):
+    
     for i in temp_lottery:
         if int(temp_choice) == i:
             return True
-    
             
         else: continue 
         
@@ -64,10 +70,10 @@ def get_TWlottery_num():
     random.shuffle(pool)
     
     for j in range(6):
-        print("中獎號碼#{}:\t{}".format(j+1, pool[j]+1))
+        print("todo2#{}:\t{}".format( j+1, pool[j]+1))
         lottery_pool.append(pool[j]+1)
     
-    print("特別號碼:\t{}".format(pool[6]+1))
+    print("todo3:\t{}".format( pool[6]+1))
     lottery_pool.append(pool[6]+1)
     
     return lottery_pool
@@ -132,23 +138,24 @@ def compare_TWlottery_num(temp_choice, temp_twlottery):
 if __name__ == '__main__':
     money = 0
     total_choice = list()
-
+    
     while True:
-        print("請輸入自己的號碼(玩一次350元)")
+        print("{todo4}")
         money -= 350
-
+        
         for i in range(6):
-            choice = input("自選號碼#{}:\t".format(i+1))
+            choice = input("todo5#{}:\t".format(i+1))    
             total_choice.append(int(choice))
 
-
+                   
         final_lottery_num = get_TWlottery_num()
         print(final_lottery_num)
         print(total_choice)
 
         compare_TWlottery_num(total_choice, final_lottery_num)
         print("{} ".format( money))
-
+        
         total_choice.clear()
-
+        
         #print("～對中 {} 個號碼～".format(compare_lottery_num(total_choice, final_lottery_num)))
+            
