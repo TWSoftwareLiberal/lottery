@@ -24,14 +24,14 @@ import sys
 def get_lottery_num(temp_total_num, temp_lottery_num):
     pool = list()
     lottery_pool = list()
-    
+
     for i in range(int(temp_total_num)):
         pool.append(i)
-    
+
     random.shuffle(pool)
-    
+
     for j in range(int(temp_lottery_num)):
-        print("todo1#{}:\t{}".format(j+1, pool[j]+1))
+        print("中獎號碼#{}:\t{}".format(j+1, pool[j]+1))
         lottery_pool.append(pool[j]+1)
 
     return lottery_pool
