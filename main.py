@@ -145,49 +145,48 @@ def compare_TWlottery_num(temp_choice, temp_twlottery):
 
 
 if __name__ == '__main__':
-    
+
     money = 0
     total_choice = list()
-    
+
     while True:
-        print("todo5")
+        print("請輸入自己的號碼(玩一次350元)/或輸入-1結束遊戲")
         money -= 350
-        
+
         for i in range(6):
             while True:
-                choice = input("todo6{}:\t".format( i+1))
+                choice = input("自選號碼#{}:\t".format(i+1))
                 if compare_single_num(choice, total_choice):
-                    print("todo7")
-                    
+                    print("已經有此號碼，請重新輸入！")
+
                 else:
                     if int(choice) <= 49 and int(choice) > 0:
                         total_choice.append(int(choice))
                         break
-                        
+
                     elif int(choice) == -1:
-                        print("todo8")
+                        print("遊戲已結束")
                         sys.exit(0)
                     else:
-                        print("todo9")
+                        print("請輸入範圍內的號碼！")
                         continue
-                   
+
         final_lottery_num = get_TWlottery_num()
-        
+
         print(" ======================")
         print("|{:3}{:3}{:3}{:3}{:3}{:3}|{:3}|".format( final_lottery_num[0], final_lottery_num[1], final_lottery_num[2],final_lottery_num[3],final_lottery_num[4],final_lottery_num[5], final_lottery_num[6] ))
         print("|{:3}{:3}{:3}{:3}{:3}{:3}|   |".format( total_choice[0], total_choice[1], total_choice[2],total_choice[3],total_choice[4],total_choice[5] ))
-        
-        
+
+
         #print(final_lottery_num)
         #print(total_choice)
-            
-        
+
+
         money += compare_TWlottery_num(total_choice, final_lottery_num)
-        print("todo10")
+        print(" ----------------------")
         print("|現在持有現金為 {} 元   |".format( money))
         print(" ======================")
-        
+
         total_choice.clear()
-        
+
         #print("～對中 {} 個號碼～".format(compare_lottery_num(total_choice, final_lottery_num)))
-            
