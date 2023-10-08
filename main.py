@@ -189,3 +189,4 @@ if __name__ == '__main__':
         total_choice.clear()
 
         #print("～對中 {} 個號碼～".format(compare_lottery_num(total_choice, final_lottery_num)))
+        #tesst
