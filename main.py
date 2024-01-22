@@ -8,7 +8,7 @@ Created on Tue Jun 20 05:23:51 2023
 
 import random
 import sys
-
+#這邊修改過
 
 """
 中獎號碼
